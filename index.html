@@ -2,29 +2,35 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href=styles.css>
 <title>今天吃什么</title>
+
 <body>
 
-<div align="center">
-    <p id="time"></p>
+    <div align="center">
+        <h1>如果有什么你喜欢的餐馆不在选择里，email你的餐厅名字到jackie950212@gmail.com</h1>
+        <p id="time"></p>
 
-    <p>
-        <image src="1.gif"></image>
-    </p>
-    <p>在Ames今天吃什么</p>
-    <Button onclick="Start()"> 开始 </Button>
-    <Button onclick="Stop()"> 停止 </Button>
-    <p>今天吃：</p>
-    <div id="name">什么呢</div>
-</div>
+        <p>
+            <image src="1.gif"></image>
+        </p>
+        <p>在Ames今天吃什么</p>
+        <Button onclick="Start()"> 开始 </Button>
+        <Button onclick="Stop()"> 停止 </Button>
+        <p>今天吃：</p>
+        <div id="name">什么呢</div>
+
+    </div>
     <script type="text/javascript">
         var clicktimes = 0;
         // document.getElementById("demo").innerHTML = Date();
-        var Name = 'Indian_Delights,Shogun_Japanese_Steakhouse,川味居_Szechuan_House,Pammel_Grocery&Grill,West_Street_Deil,玉园,Mcdonald,福满香,小台北,The Fighting Burrito, Arcadia Cafe,Mr Burrito Corp,Thai Kitchen,Jeffs Pizza Shop,Dublin Bay Irish Pub&Grill,Aunt Maudes, Culvers,The Cafe,Brick City Grill,Taco John,EI Azteca,TacoTime,Bar La Tosca,HuHot Mongolian Grill,Applebees,Red Lobster, Fuji,Texas Roadhouse,Perkings,old Chicago,Panera Bread,Pancheros Mexican Grill,Burger King,Chick-fil-A,B-Bops,The Great Plains Sauce&Dough Co.,The Grove Cafe, Hickory Park,House of Chen,Mandarin Chinese Restaurant,The spice Thai Cuisine,Flame and Skewer,Panda Express,梅厨,品味,India Palace,Chipotle,KFC,Arbys,Wallabys Bar and Grille,Subway,Grandpa noodles';
+        var Name =
+            'Indian_Delights,Shogun_Japanese_Steakhouse,川味居_Szechuan_House,Pammel_Grocery&Grill,West_Street_Deil,玉园,Mcdonald,福满香,小台北,The Fighting Burrito, Arcadia Cafe,Mr Burrito Corp,Thai Kitchen,Jeffs Pizza Shop,Dublin Bay Irish Pub&Grill,Aunt Maudes, Culvers,The Cafe,Brick City Grill,Taco John,EI Azteca,TacoTime,Bar La Tosca,HuHot Mongolian Grill,Applebees,Red Lobster, Fuji,Texas Roadhouse,Perkings,old Chicago,Panera Bread,Pancheros Mexican Grill,Burger King,Chick-fil-A,B-Bops,The Great Plains Sauce&Dough Co.,The Grove Cafe, Hickory Park,House of Chen,Mandarin Chinese Restaurant,The spice Thai Cuisine,Flame and Skewer,Panda Express,梅厨,品味,India Palace,Chipotle,KFC,Arbys,Wallabys Bar and Grille,Subway,Grandpa noodles';
         var NameArray = Name.split(',');
         var num = NameArray.length - 1;
         var timer;
+        var QR;
 
         function $(o) {
+            QR = document.getElementById("name");
             return document.getElementById("name");
         }
 
@@ -37,44 +43,45 @@
         }
 
         function Start() {
-            if(clicktimes<3){
+            if (clicktimes < 3) {
                 clicktimes += 1;
-            clearInterval(timer);
-            timer = setInterval('change()', 30);
-            }else if(clicktimes==3){
+                clearInterval(timer);
+                timer = setInterval('change()', 30);
+            } else if (clicktimes == 3) {
                 window.alert("要不别吃了，怎么样？");
-                clicktimes+=1;
-            }else if(clicktimes==4){
+                clicktimes += 1;
+            } else if (clicktimes == 4) {
                 window.alert("答应我，别点了好吗？");
-                clicktimes +=1;
-            }else if(clicktimes==5){
+                clicktimes += 1;
+            } else if (clicktimes == 5) {
                 window.alert("再点我可就关了哈");
                 clicktimes += 1;
-            }else if(clicktimes==6){
+            } else if (clicktimes == 6) {
                 window.alert("自己做吧");
-                clicktimes +=1;
-            }else if(clicktimes==7){
+                clicktimes += 1;
+            } else if (clicktimes == 7) {
                 window.alert("真的不想自己做吗？那就最后再给你一次机会")
                 clicktimes += 1;
-            clearInterval(timer);
-            timer = setInterval('change()', 30);
-            }else{
+                clearInterval(timer);
+                timer = setInterval('change()', 30);
+            } else {
                 window.alert("你也太闲了吧，去学习吧")
-        
+
             }
         }
 
         function Stop() {
+
             clearInterval(timer);
+            if (QR == 'Grandpa noodles') {
+
+            }
+
         }
     </script>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>如果有什么你喜欢的餐馆不在选择里，email你的餐厅名字到jackie950212@gmail.com</h1>
+
+
 </body>
 
 </html>
