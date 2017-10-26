@@ -1,21 +1,22 @@
 <html>
 <meta charset="UTF-8">
 <link rel="stylesheet" href=styles.css>
-<title>今天吃什么</title>
+<title id="title">今天吃什么</title>
 
 <body>
 
     <div align="center">
-        <h1>如果有什么你喜欢的餐馆不在选择里，email你的餐厅名字到jackie950212@gmail.com</h1>
+        <Button onclick="changelanguage()">change to english</Button>
+        <h1 id="h1">如果有什么你喜欢的餐馆不在选择里，email你的餐厅名字到jackie950212@gmail.com</h1>
         <p id="time"></p>
 
         <p>
             <image src="1.gif"></image>
         </p>
-        <p>在Ames今天吃什么</p>
-        <Button onclick="Start()"> 开始 </Button>
-        <Button onclick="Stop()"> 停止 </Button>
-        <p>今天吃：</p>
+        <p id="eattoday">在Ames今天吃什么</p>
+        <Button onclick="Start()" id="start"> 开始 </Button>
+        <Button onclick="Stop()" id="stop"> 停止 </Button>
+        <p id="todaychoose">今天吃：</p>
         <div id="name">什么呢</div>
 
     </div>

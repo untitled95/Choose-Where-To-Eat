@@ -1,5 +1,5 @@
 var clicktimes = 0;
-// document.getElementById("demo").innerHTML = Date();
+
 var Name =
     'Indian_Delights,Shogun_Japanese_Steakhouse,川味居_Szechuan_House,Pammel_Grocery&Grill,West_Street_Deil,玉园,Mcdonald,福满香,小台北,The Fighting Burrito, Arcadia Cafe,Mr Burrito Corp,Thai Kitchen,Jeffs Pizza Shop,Dublin Bay Irish Pub&Grill,Aunt Maudes, Culvers,The Cafe,Brick City Grill,Taco John,EI Azteca,TacoTime,Bar La Tosca,HuHot Mongolian Grill,Applebees,Red Lobster, Fuji,Texas Roadhouse,Perkings,old Chicago,Panera Bread,Pancheros Mexican Grill,Burger King,Chick-fil-A,B-Bops,The Great Plains Sauce&Dough Co.,The Grove Cafe, Hickory Park,House of Chen,Mandarin Chinese Restaurant,The spice Thai Cuisine,Flame and Skewer,Panda Express,梅厨,品味,India Palace,Chipotle,KFC,Arbys,Wallabys Bar and Grille,Subway,Grandpa noodles';
 var NameArray = Name.split(',');
@@ -51,8 +51,15 @@ function Start() {
 function Stop() {
 
     clearInterval(timer);
-    if (QR == 'Grandpa noodles') {
+}
 
-    }
+function changelanguage() {
+    document.getElementById("title").innerHTML = "where do you gonna eat day?";
+    document.getElementById("eattoday").innerHTML = "where to eat in Ames";
+    document.getElementById("start").innerHTML = "start";
+    document.getElementById("stop").innerHTML = "stop";
+    document.getElementById("todaychoose").innerHTML = "eat at";
+    document.getElementById("name").innerHTML = "Where";
+    document.getElementById("h1").innerHTML = "If there are any restaurant you like is not in the random list, please send the restaurant name to jackie950212@gmail.com";
 
 }
